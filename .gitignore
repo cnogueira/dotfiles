@@ -1,0 +1,97 @@
+# ================================
+# Secrets & credentials
+# ================================
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*_rsa
+*_ecdsa
+*_ed25519
+*.pub         # SSH public keys — upload manually to GitHub/servers
+.env
+.env.*
+!.env.example
+secrets/
+credentials/
+auth_tokens
+
+# ================================
+# Shell history (never commit)
+# ================================
+.bash_history
+.zsh_history
+.zsh_sessions/
+.lesshst
+
+# ================================
+# Package manager noise
+# ================================
+node_modules/
+.npm/
+.pnpm-store/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.bundle/
+vendor/bundle/
+
+# ================================
+# OS & editor clutter
+# ================================
+.DS_Store
+Thumbs.db
+desktop.ini
+.Spotlight-V100
+.Trashes
+*~
+*.swp
+*.swo
+.idea/
+*.iml
+
+# ================================
+# Sensitive app config
+# ================================
+# AWS
+.aws/credentials
+
+# GCP
+.config/gcloud/credentials.db
+.config/gcloud/access_tokens.db
+application_default_credentials.json
+
+# Kubernetes
+# (track config but not embedded tokens)
+.kube/cache/
+.kube/http-cache/
+
+# NPM / other registries
+.npmrc          # may contain auth tokens
+.yarnrc         # same
+
+# Git credential helpers
+.git-credentials
+.netrc
+
+# ================================
+# Logs & temp files
+# ================================
+*.log
+*.tmp
+*.temp
+.cache/
+tmp/
+
+# ================================
+# What IS tracked (for reference)
+# ================================
+# .zshrc
+# .gitconfig           ← strip signing key refs first
+# .ssh/config          ← host aliases only, no keys
+# .config/Code/User/settings.json
+# vscode/extensions.txt
+# install-ubuntu.sh

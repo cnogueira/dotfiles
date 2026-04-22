@@ -1,0 +1,4 @@
+anthropic.claude-code
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+yoavbls.pretty-ts-errors
