@@ -175,16 +175,30 @@ fi
 title "=== Node.js (via nvm) ==="
 # ─────────────────────────────────────────────
 
-if [ ! -d "$HOME/.nvm" ]; then
+export NVM_DIR="$HOME/.nvm"
+
+if [ ! -d "$NVM_DIR" ]; then
   step "Installing nvm..."
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-  export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
   nvm install --lts
   nvm alias default lts/*
   info "Node $(node --version) installed"
 else
   info "nvm already installed, skipping"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+fi
+
+# ─────────────────────────────────────────────
+title "=== ESLint ==="
+# ─────────────────────────────────────────────
+
+step "Installing ESLint (global)..."
+if ! command -v eslint &>/dev/null; then
+  npm install -g eslint
+  info "ESLint $(eslint --version) installed"
+else
+  info "ESLint already installed, skipping"
 fi
 
 # ─────────────────────────────────────────────
