@@ -16,5 +16,7 @@
   "js/ts.suggest.autoImports": true,
   "terminal.integrated.defaultProfile.linux": "zsh",
   "chat.disableAIFeatures": true,
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.useTerminal": true
 }
