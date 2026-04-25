@@ -32,8 +32,9 @@ sudo apt install -y \
   jq \
   fzf \
   bat \
-  ghostty
-info "Installed: zsh, git, curl, wget, ripgrep, jq, fzf, bat, ghostty"
+  ghostty \
+  flameshot
+info "Installed: zsh, git, curl, wget, ripgrep, jq, fzf, bat, ghostty, flameshot"
 
 # Ubuntu ships bat as 'batcat' — alias it
 if command -v batcat &>/dev/null && ! command -v bat &>/dev/null; then

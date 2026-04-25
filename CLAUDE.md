@@ -28,7 +28,7 @@ The script is idempotent — it skips steps that are already done. To test a sin
 
 ## What the installer sets up
 
-1. apt packages: `zsh git curl wget ripgrep jq fzf bat ghostty`
+1. apt packages: `zsh git curl wget ripgrep jq fzf bat ghostty flameshot`
 2. GitHub CLI (`gh`) via its official apt repo
 3. Fira Code font
 4. Oh My Zsh + plugins: `zsh-syntax-highlighting`, `zsh-autosuggestions`
